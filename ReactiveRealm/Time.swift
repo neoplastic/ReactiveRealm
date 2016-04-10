@@ -9,16 +9,16 @@
 import Foundation
 import RealmSwift
 
-class Time: Object {
+public class Time: Object {
     dynamic var time : NSDate = NSDate()
     dynamic var id : String = NSUUID().UUIDString
     
-    override static func indexedProperties() -> [String] {
+    override public static func indexedProperties() -> [String] {
         
         return ["time"]
     }
     
-    override static func primaryKey() -> String? {
+    override public static func primaryKey() -> String? {
         return "id"
     }
     

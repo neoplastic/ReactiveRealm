@@ -16,6 +16,7 @@
 		A2AA564A1CB87FB6006000A7 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AA56491CB87FB6006000A7 /* Time.swift */; };
 		A2AA564D1CB8833B006000A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AA564C1CB8833B006000A7 /* Main.storyboard */; };
 		A2B13B2E1CBA684600048EB5 /* TimeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B13B2D1CBA684600048EB5 /* TimeDetailViewController.swift */; };
+		A2EE44E71CBAEABF00E2538E /* TimeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EE44E61CBAEABF00E2538E /* TimeListViewModel.swift */; };
 		A5E6A5F5B13E23F72F9BCC07 /* Pods_ReactiveRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880F0E742B4AD105955983B2 /* Pods_ReactiveRealm.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		A2AA56491CB87FB6006000A7 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Time.swift; path = ReactiveRealm/Time.swift; sourceTree = "<group>"; };
 		A2AA564C1CB8833B006000A7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A2B13B2D1CBA684600048EB5 /* TimeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeDetailViewController.swift; sourceTree = "<group>"; };
+		A2EE44E61CBAEABF00E2538E /* TimeListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimeListViewModel.swift; path = ReactiveRealm/ViewModels/TimeListViewModel.swift; sourceTree = "<group>"; };
 		E4D9769E5C8CBFC7B6D1A3FB /* Pods-ReactiveRealm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveRealm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveRealm/Pods-ReactiveRealm.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +61,7 @@
 		A2AA56231CB87ED0006000A7 = {
 			isa = PBXGroup;
 			children = (
+				A2EE44E51CBAE95000E2538E /* ViewModels */,
 				A2AA56461CB87F76006000A7 /* Source */,
 				A2AA564B1CB87FC1006000A7 /* Model */,
 				A2AA562E1CB87ED0006000A7 /* ReactiveRealm */,
@@ -105,6 +108,14 @@
 				A2AA56491CB87FB6006000A7 /* Time.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		A2EE44E51CBAE95000E2538E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A2EE44E61CBAEABF00E2538E /* TimeListViewModel.swift */,
+			);
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 		EA920A40C3501913CA191717 /* Pods */ = {
@@ -238,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2EE44E71CBAEABF00E2538E /* TimeListViewModel.swift in Sources */,
 				A2B13B2E1CBA684600048EB5 /* TimeDetailViewController.swift in Sources */,
 				A2AA56341CB87ED0006000A7 /* DetailViewController.swift in Sources */,
 				A2AA56321CB87ED0006000A7 /* TimeViewController.swift in Sources */,
