@@ -25,7 +25,7 @@
         <!--Time View-->
         <scene sceneID="4rV-12-eu7">
             <objects>
-                <viewController id="tun-Kz-aRS" customClass="MasterViewController" customModule="ReactiveRealm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tun-Kz-aRS" customClass="TimeViewController" customModule="ReactiveRealm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="A7w-Ke-YSN"/>
                         <viewControllerLayoutGuide type="bottom" id="iux-Km-b5O"/>
@@ -60,11 +60,77 @@
                     <navigationItem key="navigationItem" title="Time View" id="RPp-BF-jFH"/>
                     <connections>
                         <outlet property="tableView" destination="iUe-ZL-RLZ" id="qg7-ek-IcQ"/>
+                        <segue destination="0R5-FT-WaL" kind="show" identifier="TimeDetailSegue" id="wuS-2t-yX7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ren-DU-Na6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="627" y="-630"/>
+        </scene>
+        <!--TimeDetailViewController-->
+        <scene sceneID="Bel-7M-5Zp">
+            <objects>
+                <viewController title="TimeDetailViewController" id="0R5-FT-WaL" customClass="TimeDetailViewController" customModule="ReactiveRealm" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bV3-sJ-kTn"/>
+                        <viewControllerLayoutGuide type="bottom" id="1q1-iB-0oX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qs2-e9-odR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aN-er-JTi">
+                                <rect key="frame" x="281" y="76" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhA-Ug-vzq">
+                                <rect key="frame" x="256" y="178" width="89" height="30"/>
+                                <state key="normal" title="Update Time"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CTm-ly-J3A">
+                                <rect key="frame" x="20" y="111" width="560" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tc5-cf-gdw">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJz-fq-saA">
+                                        <rect key="frame" x="0.0" y="25" width="560" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qwT-hk-7If"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CTm-ly-J3A" firstAttribute="centerX" secondItem="4aN-er-JTi" secondAttribute="centerX" id="FMc-BR-FH6"/>
+                            <constraint firstItem="yhA-Ug-vzq" firstAttribute="top" secondItem="CTm-ly-J3A" secondAttribute="bottom" constant="17" id="TO4-qr-spY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CTm-ly-J3A" secondAttribute="trailing" id="brM-Yi-4Qr"/>
+                            <constraint firstItem="CTm-ly-J3A" firstAttribute="leading" secondItem="Qs2-e9-odR" secondAttribute="leadingMargin" id="iQZ-fg-OAM"/>
+                            <constraint firstItem="4aN-er-JTi" firstAttribute="centerX" secondItem="Qs2-e9-odR" secondAttribute="centerX" id="jLd-Hk-EAd"/>
+                            <constraint firstItem="CTm-ly-J3A" firstAttribute="centerX" secondItem="yhA-Ug-vzq" secondAttribute="centerX" id="nUO-xh-Uey"/>
+                            <constraint firstItem="4aN-er-JTi" firstAttribute="topMargin" secondItem="bV3-sJ-kTn" secondAttribute="bottom" constant="20" id="vHq-Pk-PEK"/>
+                            <constraint firstItem="CTm-ly-J3A" firstAttribute="top" secondItem="4aN-er-JTi" secondAttribute="bottom" constant="14" id="vT8-OM-mUq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="idLabel" destination="Tc5-cf-gdw" id="RRi-bc-J2M"/>
+                        <outlet property="timeLabel" destination="GJz-fq-saA" id="bq7-f5-7Ny"/>
+                        <outlet property="updateTimeButton" destination="yhA-Ug-vzq" id="nlD-zN-iau"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="goB-hJ-Wdh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1292" y="-630"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">

@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		A2AA56301CB87ED0006000A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AA562F1CB87ED0006000A7 /* AppDelegate.swift */; };
-		A2AA56321CB87ED0006000A7 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AA56311CB87ED0006000A7 /* MasterViewController.swift */; };
+		A2AA56321CB87ED0006000A7 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AA56311CB87ED0006000A7 /* TimeViewController.swift */; };
 		A2AA56341CB87ED0006000A7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AA56331CB87ED0006000A7 /* DetailViewController.swift */; };
 		A2AA56391CB87ED0006000A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2AA56381CB87ED0006000A7 /* Assets.xcassets */; };
 		A2AA563C1CB87ED0006000A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AA563A1CB87ED0006000A7 /* LaunchScreen.storyboard */; };
 		A2AA56481CB87F7F006000A7 /* ReactiveRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AA56471CB87F7F006000A7 /* ReactiveRealm.swift */; };
 		A2AA564A1CB87FB6006000A7 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AA56491CB87FB6006000A7 /* Time.swift */; };
 		A2AA564D1CB8833B006000A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AA564C1CB8833B006000A7 /* Main.storyboard */; };
+		A2B13B2E1CBA684600048EB5 /* TimeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B13B2D1CBA684600048EB5 /* TimeDetailViewController.swift */; };
 		A5E6A5F5B13E23F72F9BCC07 /* Pods_ReactiveRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880F0E742B4AD105955983B2 /* Pods_ReactiveRealm.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,7 +24,7 @@
 		880F0E742B4AD105955983B2 /* Pods_ReactiveRealm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveRealm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2AA562C1CB87ED0006000A7 /* ReactiveRealm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveRealm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2AA562F1CB87ED0006000A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A2AA56311CB87ED0006000A7 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		A2AA56311CB87ED0006000A7 /* TimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
 		A2AA56331CB87ED0006000A7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A2AA56381CB87ED0006000A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2AA563B1CB87ED0006000A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,6 +32,7 @@
 		A2AA56471CB87F7F006000A7 /* ReactiveRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReactiveRealm.swift; path = ReactiveRealm/ReactiveRealm.swift; sourceTree = "<group>"; };
 		A2AA56491CB87FB6006000A7 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Time.swift; path = ReactiveRealm/Time.swift; sourceTree = "<group>"; };
 		A2AA564C1CB8833B006000A7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A2B13B2D1CBA684600048EB5 /* TimeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeDetailViewController.swift; sourceTree = "<group>"; };
 		E4D9769E5C8CBFC7B6D1A3FB /* Pods-ReactiveRealm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveRealm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveRealm/Pods-ReactiveRealm.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,8 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				A2AA562F1CB87ED0006000A7 /* AppDelegate.swift */,
-				A2AA56311CB87ED0006000A7 /* MasterViewController.swift */,
+				A2AA56311CB87ED0006000A7 /* TimeViewController.swift */,
 				A2AA56331CB87ED0006000A7 /* DetailViewController.swift */,
+				A2B13B2D1CBA684600048EB5 /* TimeDetailViewController.swift */,
 				A2AA564C1CB8833B006000A7 /* Main.storyboard */,
 				A2AA56381CB87ED0006000A7 /* Assets.xcassets */,
 				A2AA563A1CB87ED0006000A7 /* LaunchScreen.storyboard */,
@@ -235,8 +238,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2B13B2E1CBA684600048EB5 /* TimeDetailViewController.swift in Sources */,
 				A2AA56341CB87ED0006000A7 /* DetailViewController.swift in Sources */,
-				A2AA56321CB87ED0006000A7 /* MasterViewController.swift in Sources */,
+				A2AA56321CB87ED0006000A7 /* TimeViewController.swift in Sources */,
 				A2AA564A1CB87FB6006000A7 /* Time.swift in Sources */,
 				A2AA56481CB87F7F006000A7 /* ReactiveRealm.swift in Sources */,
 				A2AA56301CB87ED0006000A7 /* AppDelegate.swift in Sources */,
