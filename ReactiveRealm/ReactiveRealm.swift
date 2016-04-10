@@ -10,8 +10,28 @@ import Foundation
 import RxSwift
 import RealmSwift
 
+// A set of extensions to convert common Realm functions into observables.
+
 // MARK: - Realm Extension
 public extension Realm {
+    
+    /**
+     Generic write to the Realm
+     
+     -parameter writeBlock: Put all the changes you wish to make in Realm inside this block. We wrap this block within a realm.Write().
+     */
+    func rx_write(writeBlock: ()->Void) -> Observable<Void> {
+        return Observable.create({ (observer) -> Disposable in
+            do {
+                try self.write ({
+                    writeBlock()
+                })
+            } catch {
+                observer.onError(error)
+            }
+            return NopDisposable.instance
+        })
+    }
     
     /**
      Add a sequence of model objects into the Realm.
@@ -294,3 +314,4 @@ public extension List {
         })
     }
 }
+
