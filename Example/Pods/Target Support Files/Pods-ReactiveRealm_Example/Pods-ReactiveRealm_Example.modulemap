@@ -1,0 +1,6 @@
+framework module Pods_ReactiveRealm_Example {
+  umbrella header "Pods-ReactiveRealm_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

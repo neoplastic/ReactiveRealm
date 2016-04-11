@@ -1,0 +1,31 @@
+PODS:
+  - ReactiveRealm (0.1.0):
+    - RealmSwift (~> 0.98.6)
+    - RxSwift (~> 2.3)
+  - Realm (0.98.6):
+    - Realm/Headers (= 0.98.6)
+  - Realm/Headers (0.98.6)
+  - RealmSwift (0.98.6):
+    - Realm (= 0.98.6)
+  - RxCocoa (2.3.1):
+    - RxSwift (~> 2.3.1)
+  - RxSwift (2.3.1)
+
+DEPENDENCIES:
+  - ReactiveRealm (from `../`)
+  - RealmSwift (~> 0.98.6)
+  - RxCocoa (~> 2.3.1)
+  - RxSwift (~> 2.3.1)
+
+EXTERNAL SOURCES:
+  ReactiveRealm:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ReactiveRealm: 88ffce72a352ed21dcf40ec1d0a5d8d4b49db6fa
+  Realm: 44803f35418c5d89b27825a564247fcd190de37e
+  RealmSwift: c7239c52c83f8c43525a5269ba7be1694da33afc
+  RxCocoa: a2baaf3462b989559a51dce59d78fbebb8fe0afa
+  RxSwift: 829b2843e9eddc77a02cb3f5117f0d55f8f646f1
+
+COCOAPODS: 0.39.0

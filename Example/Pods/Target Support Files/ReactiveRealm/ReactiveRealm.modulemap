@@ -1,0 +1,6 @@
+framework module ReactiveRealm {
+  umbrella header "ReactiveRealm-umbrella.h"
+
+  export *
+  module * { export * }
+}

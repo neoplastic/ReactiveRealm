@@ -1,0 +1,9 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'ReactiveRealm_Example', :exclusive => true do
+  pod 'ReactiveRealm', :path => '../'
+  pod 'RxSwift', '~> 2.3.1'
+  pod 'RealmSwift', '~> 0.98.6'
+  pod 'RxCocoa', '~> 2.3.1'
+end
