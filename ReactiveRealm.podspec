@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ReactiveRealm"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "Realm + RxSwift = A Good Time"
 
 # This description is used to generate tags and improve search results.
@@ -38,6 +38,6 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'RealmSwift', '~> 0.98.6'
-  s.dependency 'RxSwift', '~> 2.3'
+  s.dependency 'RealmSwift', '~> 1.0.0'
+  s.dependency 'RxSwift', '~> 2.5.0'
 end

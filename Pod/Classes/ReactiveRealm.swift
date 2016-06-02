@@ -66,11 +66,11 @@ public extension Realm {
      - parameter update: if set to true, will find or create. This requires an indexed id.
      - Returns: an observable
      */
-    public func rx_create<T: Object>(type: T.Type, value: AnyObject = [:], update: Bool = false)-> Observable<Void> {
+    public func rx_create<T: Object>(type: T.Type, value: AnyObject = [:], update: Bool = false)-> Observable<T> {
         return Observable.create({ (observer) -> Disposable in
             do {
                 try self.write({
-                    self.create(type, value: value, update: update)
+                    observer.onNext(self.create(type, value: value, update: update))
                 })
             } catch {
                 observer.onError(error)
