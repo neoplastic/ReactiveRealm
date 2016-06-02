@@ -251,15 +251,17 @@ public extension AnyRealmCollection {
      */
     public func rx_addNotification() -> Observable<AnyRealmCollection<T>> {
         return Observable.create({ (observer) -> Disposable in
-            let token = self.addNotificationBlock({ (collection: AnyRealmCollection<T>?, error: NSError?) in
-                if let error = error {
+            let token = self.addNotificationBlock({ (collectionChange: RealmCollectionChange<AnyRealmCollection<T>>) in
+                switch collectionChange {
+                case .Initial(let object):
+                    observer.onNext(object)
+                case .Update(let object, deletions: _, insertions: _, modifications: _):
+                    observer.onNext(object)
+                case .Error(let error):
                     observer.onError(error)
-                    return
-                }
-                if let collection = collection {
-                    observer.onNext(collection)
                 }
             })
+            
             return AnonymousDisposable {
                 token.stop()
             }
@@ -277,15 +279,19 @@ public extension Results {
      */
     public func rx_addNotification() -> Observable<(Results<T>)> {
         return Observable.create({ (observer) -> Disposable in
-            let token = self.addNotificationBlock({ (results: Results<T>?, error: NSError?) in
-                if let error = error {
+            
+            let token = self.addNotificationBlock({ (collectionChange) in
+                switch collectionChange {
+                case .Initial(let object):
+                    observer.onNext(object)
+                case .Update(let object, deletions: _, insertions: _, modifications: _):
+                    observer.onNext(object)
+                case .Error(let error):
                     observer.onError(error)
-                    return
                 }
-                if let results = results {
-                    observer.onNext(results)
-                }
+
             })
+
             return AnonymousDisposable {
                 token.stop()
             }
@@ -305,8 +311,15 @@ public extension List {
      */
     public func rx_addNotification() -> Observable<(List<T>)> {
         return Observable.create({ (observer) -> Disposable in
-            let token = self.addNotificationBlock({ (list: List<T>) in
-                observer.onNext(list)
+            let token = self.addNotificationBlock({ (collectionChange) in
+                switch collectionChange {
+                case .Initial(let object):
+                    observer.onNext(object)
+                case .Update(let object, deletions: _, insertions: _, modifications: _):
+                    observer.onNext(object)
+                case .Error(let error):
+                    observer.onError(error)
+                }
             })
             return AnonymousDisposable {
                 token.stop()
